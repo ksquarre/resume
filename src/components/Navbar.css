@@ -1,0 +1,153 @@
+
+/* 
+#D0CDE1-pretty blue
+#6C63FF-blue
+#3F3D56- dark blue 
+FFB6B6-pink
+rgb(233, 105, 126)*/
+.navbar{
+    min-height: 13vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+     color:#353d53;
+     flex-grow: 1;
+    /*#D0CDE1; */
+}
+.logo{
+    width: 200px;
+}
+.logo img{
+    width: 100%;
+
+}
+
+ .icon{
+    color: #544f75;
+    width: 30px;
+    height: 30px;
+    display: none;
+    
+}
+
+
+.list{
+    width: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.list li a{
+    color: #544f75;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.list li{
+    text-align: center;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    width: 0;
+    height: 10%;
+    background-color: #69648a;
+    transition: all 0.6s;
+}
+
+.list li:hover::before{
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:720px){
+
+   
+    
+    .links{
+        position: absolute;
+        top: 13vh;
+        right: -200%;
+        min-height: 87vh;
+        background-color:#69648a ;
+        width: 99.99%;
+        text-align: center;
+        font-size: 18px;
+        transition: all 1s;
+        color: white;
+        z-index: 0;
+       
+    }
+    .active{
+        right: 0;
+        z-index: 2;
+       
+    }
+    .icon{
+        display: block;
+        font-size: 24px;
+        margin: 0 15px;
+        text-align: right;
+    }
+    .list{
+        color: white;
+        margin: 20px 0;
+        width: 100%;
+        height: 50vh;
+        flex-direction: column;
+       justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+      
+        
+    }
+
+    .list::before{
+        
+        content: '';
+        position: absolute;
+       
+        top: 0;
+        left: 50%;
+        width: 40%;
+        height: 1%;
+        transform: translate(-50%,0);
+        opacity: 0.89;
+        border-radius: 20px;
+        background-color: white;
+       
+    }
+    .list::after{
+        
+        content: '';
+        position: absolute;
+       
+        bottom: 0;
+        left: 50%;
+        width: 40%;
+        height: 1%;
+        transform: translate(-50%,0);
+        opacity: 0.89;
+        border-radius: 20px;
+        background-color: white;
+       
+    }
+
+    .list li a{
+        color: white;
+    }
+
+}
+
+@media screen and (max-width:520px){
+    .list li a{
+        font-size: 14px;
+    }
+}
